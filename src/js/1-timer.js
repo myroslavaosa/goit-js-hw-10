@@ -13,12 +13,6 @@ refs.btn.addEventListener("click", () => {
 
     if (!selectedDate || selectedDate.getTime() <= Date.now()) {
         refs.btn.setAttribute("disabled", true);
-        iziToast.show({
-            title: 'Error',
-            message: 'Please choose a date in the future!',
-            position: 'topRight',
-            color: 'red',
-        });
         return;
     }
 

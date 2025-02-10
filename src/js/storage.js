@@ -1,3 +1,6 @@
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
 export const refs = {
     input: document.querySelector('#datetime-picker'),
     days: document.querySelector('[data-days]'),
@@ -19,6 +22,12 @@ export const refs = {
                 refs.btn.removeAttribute("disabled");
             } else {
                 refs.btn.setAttribute("disabled", true);
+                iziToast.error({
+            title: 'Error',
+            message: 'Please choose a date in the future!',
+            position: 'topRight',
+            color: 'red',
+        });
             }
         },
     },
