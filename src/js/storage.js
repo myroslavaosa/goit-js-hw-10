@@ -8,6 +8,7 @@ export const refs = {
     minutes: document.querySelector('[data-minutes]'),
     seconds: document.querySelector('[data-seconds]'),
     btn: document.querySelector('button'),
+    btnCreate: document.querySelector('.form button'),
 
     options: {
         enableTime: true,
@@ -27,6 +28,7 @@ export const refs = {
             message: 'Please choose a date in the future!',
             position: 'topRight',
             color: 'red',
+            timeout: 5000,
         });
             }
         },
@@ -47,3 +49,5 @@ export function convertMs(ms) {
         seconds: Math.floor((((ms % day) % hour) % minute) / second),
     };
 }
+
+

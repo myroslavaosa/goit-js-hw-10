@@ -8,6 +8,8 @@ flatpickr(refs.input, refs.options);
 
 let countdownInterval;
 
+refs.btn.setAttribute("disabled", true);
+
 refs.btn.addEventListener("click", () => {
     const selectedDate = refs.options.userSelectedDate;
 
@@ -18,6 +20,7 @@ refs.btn.addEventListener("click", () => {
 
     refs.btn.setAttribute("disabled", true);
     refs.input.setAttribute("disabled", true);
+    refs.btn.style.pointerEvents = "none";
 
     countdownInterval = setInterval(() => {
         const now = new Date().getTime();
