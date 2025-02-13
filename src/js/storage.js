@@ -9,6 +9,7 @@ export const refs = {
     seconds: document.querySelector('[data-seconds]'),
     btn: document.querySelector('button'),
     btnCreate: document.querySelector('.form button'),
+    form: document.querySelector('.form'),
 
     options: {
         enableTime: true,

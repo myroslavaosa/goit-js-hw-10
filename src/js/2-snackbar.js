@@ -51,6 +51,6 @@ const makePromise = (event) => {
 };
 
 // Attach event listener to button
-refs.btnCreate.addEventListener('click', makePromise);
+refs.form.addEventListener('submit', makePromise);
 
 
